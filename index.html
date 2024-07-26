@@ -9,10 +9,16 @@
 <body>
     <div class="container">
         <h1>Weather Forecast</h1>
-        <form id="city-form">
+        <!-- <form id="city-form">
             <input type="text" id="city-input" placeholder="Enter city name" required>
             <button type="submit">Get Weather</button>
-        </form>
+        </form> -->
+        <form id="city-form">
+            <input type="text" id="city-input" list="city-list" placeholder="Enter city">
+            <datalist id="city-list"></datalist>
+            <button type="submit">Get Weather</button>
+          </form>
+          
         <div class="weather-info">
             <p id="location"></p>
             <p id="description"></p>
