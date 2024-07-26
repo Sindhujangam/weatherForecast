@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const apiKey = '3a0aab383df26c3bb7b99cedaedd0e18'; // Replace with your OpenWeatherMap API key
+    const apiKey = '3a0aab383df26c3bb7b99cedaedd0e18'; 
     const cityForm = document.getElementById('city-form');
     const cityInput = document.getElementById('city-input');
   
