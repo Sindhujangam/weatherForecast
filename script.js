@@ -30,6 +30,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 filteredCities.slice(0, 10).forEach(city => {
                     const div = document.createElement('div');
                     div.textContent = city.name;
+                    div.classList.add('suggestion-item'); // Add class for styling
                     div.addEventListener('click', () => {
                         cityInput.value = city.name;
                         suggestionsContainer.innerHTML = ''; // Clear suggestions
@@ -58,7 +59,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function findCity(cityName) {
         const city = cityList.find(item => item.name.toLowerCase() === cityName.toLowerCase());
-        console.log(`Searching for city: ${cityName}`); // Debugging log
         if (city) {
             console.log(`Found city: ${city.name}, ID: ${city.id}, Country: ${city.country || 'IN'}`);
             

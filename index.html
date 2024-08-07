@@ -5,27 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Forecast</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/places.js@1.19.1/dist/places.min.css" />
 </head>
 <body>
     <div class="container">
-        <h1>Weather Forecast</h1>
         <form id="city-form">
-            <input type="text" id="city-input" placeholder="Enter city name" required>
-            <div id="suggestions" class="suggestions"></div>
+            <input type="text" id="city-input" placeholder="Enter city name">
+            <div id="suggestions"></div> <!-- Suggestions container inside the form -->
             <button type="submit">Get Weather</button>
         </form>
-        <div class="weather-info">
-            <p id="location"></p>
-            <p id="weather-icon"></p>
-            <p id="completedescription"></p>
-            <p id="description"></p>
-            <p id="temperature"></p>
-            <p id="humidity"></p>
-            <p id="precipitation"></p>
+        <div id="weather-info">
+            <div id="weather-icon"></div>
+            <div id="location"></div>
+            <div id="completedescription"></div>
+            <div id="description"></div>
+            <div id="temperature"></div>
+            <div id="humidity"></div>
+            <div id="precipitation"></div>
+            
         </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/places.js@1.19.1/dist/places.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
