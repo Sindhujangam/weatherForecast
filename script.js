@@ -84,6 +84,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 displayWeatherData(data);
                 cityInput.value = ''; // Clear input after fetching weather data
                 suggestionsContainer.innerHTML = ''; // Clear suggestions after fetching data
+                enableAutocomplete(cityList); // Re-enable autocomplete after fetching data
             })
             .catch(error => {
                 console.error('Unable to fetch weather data:', error);
