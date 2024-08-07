@@ -58,6 +58,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function findCity(cityName) {
         const city = cityList.find(item => item.name.toLowerCase() === cityName.toLowerCase());
+        console.log(`Searching for city: ${cityName}`); // Debugging log
         if (city) {
             console.log(`Found city: ${city.name}, ID: ${city.id}, Country: ${city.country || 'IN'}`);
             
