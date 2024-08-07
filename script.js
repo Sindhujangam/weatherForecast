@@ -129,7 +129,7 @@ document.addEventListener('DOMContentLoaded', function () {
         document.getElementById('humidity').textContent = `Humidity: ${humidity}%`;
         document.getElementById('precipitation').textContent = `Precipitation (last hour): ${precipitation}mm`;
 
-        const iconUrl = `http://openweathermap.org/img/wn/${iconCode}.png`;
+        const iconUrl = `https://openweathermap.org/img/wn/${iconCode}.png`;
         document.getElementById('weather-icon').innerHTML = `<img src="${iconUrl}" alt="${description}" />`;
     }
 
