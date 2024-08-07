@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
     let cityList = [];
 
     // Fetch city list
-    fetch('data/city.list.json')
+    fetch('city.list.json')
         .then(response => {
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
