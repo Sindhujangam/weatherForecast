@@ -14,6 +14,7 @@ body {
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  position: relative; /* Needed for absolute positioning of suggestions */
 }
 
 form {
@@ -26,6 +27,8 @@ input[type="text"] {
   border-radius: 5px;
   font-size: 16px;
   width: calc(100% - 22px);
+  box-sizing: border-box; /* Ensures padding and border are included in width */
+  position: relative; /* Needed for suggestions container to align correctly */
 }
 
 button {
@@ -48,6 +51,46 @@ button:hover {
 }
 
 .weather-info p {
-  margin: 5px 0;
+  margin: 12px 0;
   font-size: 18px;
+  color: #333;
+}
+
+.weather-info #description {
+  font-weight: bold;
+  color: #007BFF;
+}
+
+.weather-info #completedescription {
+  font-weight: bold;
+  font-size: 1em;
+}
+
+.weather-info #weather-icon img {
+  width: 30%;
+  height: auto; /* Maintain aspect ratio of the icon */
+}
+
+.suggestions {
+  border: 1px solid #ddd;
+  border-radius: 5px; /* Match the input border radius */
+  max-height: 150px;
+  overflow-y: auto;
+  position: absolute;
+  top: calc(100% + 10px); /* Position suggestions below the input */
+  left: 0;
+  width: calc(100% - 2px); /* Adjust width to align with input */
+  background-color: white;
+  z-index: 1000;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Optional: add shadow for better visibility */
+}
+
+.suggestions div {
+  padding: 8px;
+  cursor: pointer;
+  font-size: 16px; /* Ensure font size matches input for consistency */
+}
+
+.suggestions div:hover {
+  background-color: #f0f0f0;
 }
